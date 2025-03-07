@@ -6,6 +6,7 @@ print("hello world")
 
 PrefabFiles = {
     "locust_mob",
+    "fern_plant",
 }
 
 local STRINGS = GLOBAL.STRINGS
