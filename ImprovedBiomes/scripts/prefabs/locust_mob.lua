@@ -1,7 +1,4 @@
 local assets = { -- The assets table for our mob, using spider assets as a template
-    Asset("ANIM", "anim/ds_spider_basic.zip"),
-    Asset("ANIM", "anim/spider_build.zip"),
-    Asset("SOUND", "sound/spider.fsb"),
     Asset("ANIM", "anim/locust_mob.zip")
 }
 
@@ -33,8 +30,15 @@ local function fn()
     
     inst:AddComponent("inspectable")
     inst:AddComponent("inventoryitem")
+    inst:AddComponent("locomotor")
+    inst:AddComponent("eater")
     -- inst.components.inspectable
     -- Code here will only be run on the server
+    
+
+    inst:SetBrain(require("brains/locust_brain"))
+
+
   
     return inst -- At the end we return our entity
 end
